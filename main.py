@@ -9,4 +9,7 @@ if __name__ == "__main__":
     # else:
     #     emp.calculate_daily_wage(0,emp.name,emp.emp_id)
 
-    print("monthly wage --->", emp.cal_monthly_wage())
+    # print("monthly wage --->", emp.cal_monthly_wage())
+   
+    emp.calculate_daily_wage(int(input("Enter how many hours worked: ")),emp.name,emp.emp_id)
+ 

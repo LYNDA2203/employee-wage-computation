@@ -21,6 +21,21 @@ class Employee:
     def calculate_daily_wage(self, hours,):
          return  hours * self.wage_per_hour
 
+    def calculate_daily_wage(self, hours, name, emp_id):
+        status = Employee.check_attendance(name, emp_id)
+        match status:
+            case True:
+                daily_wage = hours * self.wage_per_hour
+                print(f"Present | Hours: {hours} | Daily Wage: {daily_wage}")
+                return daily_wage
+            case False:
+                print("Absent | Daily Wage: 0")
+                return 0
+            case _:
+                print("Invalid attendance status. Daily Wage: 0")
+                return 0
+
+
     def cal_monthly_wage(self):
         monthly_wage = 0
         print(f"\nCalculating Monthly Wage for {self.name} (ID: {self.emp_id})")
