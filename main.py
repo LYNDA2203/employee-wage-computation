@@ -1,4 +1,5 @@
 from employee import Employee
+from company import Company
 
 if __name__ == "__main__":
     emp = Employee(input("Enter Employee ID: "), input("Enter Employee Name: "), float(input("Enter wage per hour: ")))
@@ -15,7 +16,19 @@ if __name__ == "__main__":
     # by assuming 20 working days per month(UC5)
     # print("monthly wage --->", emp.cal_monthly_wage())
 
-    # by calculate the wage until condition fails(UC6)
-    print("monthly wage --->", emp.cal_monthly_wage())
- 
- 
+     # by calculate the wage until condition fails(UC6)
+    # print("monthly wage --->", emp.calculate_monthly_wage())
+
+    # Creating Company
+    company1=Company("Wipro",20,22,100)
+    company2=Company("Amazon",20,22,100)
+
+    company1.add_employee(101,"Lynda")
+    company2.add_employee(102,"Princy")
+    company1.add_employee(103,"Rita")
+
+    company1.get_employees()
+    company2.get_employees()
+
+    company1.calculate_all_employee_monthly_wage()
+    company2.calculate_all_employee_monthly_wage()
