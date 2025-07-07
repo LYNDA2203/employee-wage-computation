@@ -1,3 +1,4 @@
+from employee import Employee
 class Company:
     def __init__(self, company_name,wage_per_hour,max_days,max_hours):
         self.company_name = company_name
